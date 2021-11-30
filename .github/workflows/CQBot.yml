@@ -7,7 +7,7 @@ jobs:
     - name: 开始
       run: |
             sudo su
-            pip install nb-cli
+            pip install nb-cli bs4 imageio
             pip install nonebot-adapter-cqhttp
             sudo chmod 0777 /home
             cd /home
@@ -25,5 +25,6 @@ jobs:
       run: |
             cd /home/CQBot/cq-bot
             sudo ./go-cqhttp_amd64 &
+            sleep 10
             cd mybot
             python3 bot.py                  
