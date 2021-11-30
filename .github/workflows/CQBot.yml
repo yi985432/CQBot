@@ -7,7 +7,7 @@ jobs:
     - name: 开始
       run: |
             sudo su
-            pip install nb-cli bs4 imageio socketio aiohttp psutil setuptools
+            pip install nb-cli bs4 imageio lxml
             pip install nonebot-adapter-cqhttp
             sudo chmod 0777 /home
             cd /home
@@ -16,7 +16,7 @@ jobs:
             unzip cq-bot.zip 
             unzip Plugins.zip -d cq-bot/mybot/mybot/plugins
             unzip Plugins2.zip -d cq-bot/mybot/mybot/plugins
-            chmod -Rf 0777 cq-bot/mybot/mybot/plugins/*
+            chmod -Rf 0777 cq-bot/mybot/mybot/plugins/
             cd cq-bot
             chmod 0755 ./go-cqhttp_amd64
             
