@@ -16,8 +16,8 @@ jobs:
             unzip cq-bot.zip
             unzip Plugins.zip
             unzip Plugins2.zip
-            mv ./Plugins/* cq-bot/mybot/mybot/plugins
-            mv ./Plugins2/* cq-bot/mybot/mybot/plugins
+            cp ./Plugins/* cq-bot/mybot/mybot/plugins
+            cp ./Plugins2/* cq-bot/mybot/mybot/plugins
             chmod 0755 cq-bot/mybot/mybot/plugins/*
             cd cq-bot
             ./go-cqhttp_amd64 &
