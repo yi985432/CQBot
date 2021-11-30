@@ -16,10 +16,10 @@ jobs:
             unzip cq-bot.zip
             unzip Plugins.zip
             unzip Plugins2.zip
+            mv ./Plugins/* cq-bot/mybot/mybot/plugins
+            mv ./Plugins2/* cq-bot/mybot/mybot/plugins
+            chmod 0755 cq-bot/mybot/mybot/plugins/*
             cd cq-bot
             ./go-cqhttp_amd64 &
             cd mybot
-            mv /home/CQBbot/Plugins/* ./mybot/plugins
-            mv /home/CQBot/Plugins2/* ./mybot/plugins
-            sudo chmod 0755 ./mybot/plugins/*
             python3 bot.py
