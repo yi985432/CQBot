@@ -14,11 +14,8 @@ jobs:
             git clone https://github.com/yi985432/CQBot
             cd CQBot
             unzip cq-bot.zip 
-            unzip Plugins.zip -d .
-            unzip Plugins2.zip -d .
-            ls & pwd
-            cp ./Plugins/* cq-bot/mybot/mybot/plugins
-            cp ./Plugins2/* cq-bot/mybot/mybot/plugins
+            unzip Plugins.zip -d cq-bot/mybot/mybot/plugins
+            unzip Plugins2.zip -d cq-bot/mybot/mybot/plugins
             chmod 0755 cq-bot/mybot/mybot/plugins/*
             cd cq-bot
             ./go-cqhttp_amd64 &
