@@ -27,4 +27,6 @@ jobs:
             sudo ./go-cqhttp_amd64 &
             sleep 20
             cd mybot
-            python3 bot.py                  
+            rm -rf mybot/plugins/nonebot_plugin_docs 
+            rm -rf mybot/plugins/nonebot_plugin_test
+            nb run              
