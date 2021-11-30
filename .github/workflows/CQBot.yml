@@ -33,16 +33,16 @@ jobs:
                      
     - name: Sleep1
       run: |
-            sleep 21100
+            sleep 21000
        
     - name: Sleep2
       run: |
-            sleep 21100
+            sleep 19000
     
     - name: Sleep3
       run: |
-            sleep 21100
+            sleep 15000
 
     - name: Sleep4
       run: |
-            sleep 21100
+            sleep 10000
