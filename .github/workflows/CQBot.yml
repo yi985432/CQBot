@@ -7,7 +7,7 @@ jobs:
     - name: 开始
       run: |
             sudo su
-            pip install nb-cli bs4 imageio socketio aiohttp psutil
+            pip install nb-cli bs4 imageio socketio aiohttp psutil setuptools
             pip install nonebot-adapter-cqhttp
             sudo chmod 0777 /home
             cd /home
