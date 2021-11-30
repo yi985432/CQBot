@@ -29,4 +29,20 @@ jobs:
             cd mybot
             rm -rf mybot/plugins/nonebot_plugin_docs 
             rm -rf mybot/plugins/nonebot_plugin_test
-            nb run              
+            nb run &
+                     
+    - name: Sleep1
+      run: |
+            sleep 21100
+       
+    - name: Sleep2
+      run: |
+            sleep 21100
+    
+    - name: Sleep3
+      run: |
+            sleep 21100
+
+    - name: Sleep4
+      run: |
+            sleep 21100
