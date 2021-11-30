@@ -6,8 +6,9 @@ jobs:
     steps:
     - name: 开始
       run: |
-            sudo pip install nb-cli
-            sudo pip install nonebot-adapter-cqhttp
+            sudo su
+            pip install nb-cli
+            pip install nonebot-adapter-cqhttp
             sudo chmod 0777 /home
             cd /home
             git clone https://github.com/yi985432/CQBot
@@ -16,9 +17,9 @@ jobs:
             unzip Plugins.zip
             unzip Plugins2.zip
             cd cq-bot
-            sudo ./go-cqhttp_amd64 &
+            ./go-cqhttp_amd64 &
             cd mybot
-            mv /home/Plugins/* ./mybot/plugins
-            mv /home/Plugins2/* ./mybot/plugins
+            mv /home/CQBbot/Plugins/* ./mybot/plugins
+            mv /home/CQBot/Plugins2/* ./mybot/plugins
             sudo chmod 0755 ./mybot/plugins/*
             python3 bot.py
