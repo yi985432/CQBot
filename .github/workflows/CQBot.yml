@@ -25,6 +25,6 @@ jobs:
       run: |
             cd /home/CQBot/cq-bot
             sudo ./go-cqhttp_amd64 &
-            sleep 60
+            sleep 20
             cd mybot
             python3 bot.py                  
