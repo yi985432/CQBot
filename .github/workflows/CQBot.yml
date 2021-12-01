@@ -31,18 +31,41 @@ jobs:
             rm -rf mybot/plugins/nonebot_plugin_test
             nb run &
                      
-    - name: Sleep1
+    - name: Sleep
       run: |
             sleep 21000
-       
-    - name: Sleep2
-      run: |
-            sleep 19000
-    
-    - name: Sleep3
-      run: |
-            sleep 15000
 
-    - name: Sleep4
+jobs:
+  Ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 开始
       run: |
-            sleep 10000
+            sudo su
+            pip install nb-cli bs4 imageio lxml setuptools psutil socketio aiohttp
+            pip install nonebot-adapter-cqhttp
+            sudo chmod 0777 /home
+            cd /home
+            git clone https://github.com/yi985432/CQBot
+            cd CQBot
+            unzip cq-bot.zip 
+            unzip Plugins.zip -d cq-bot/mybot/mybot/plugins
+            unzip Plugins2.zip -d cq-bot/mybot/mybot/plugins
+            chmod -Rf 0777 cq-bot/mybot/mybot/plugins/
+            cd cq-bot
+            chmod 0755 ./go-cqhttp_amd64
+            
+              
+    - name: 运行
+      run: |
+            cd /home/CQBot/cq-bot
+            sudo ./go-cqhttp_amd64 &
+            sleep 20
+            cd mybot
+            rm -rf mybot/plugins/nonebot_plugin_docs 
+            rm -rf mybot/plugins/nonebot_plugin_test
+            nb run &
+                     
+    - name: Sleep
+      run: |
+            sleep 21000
