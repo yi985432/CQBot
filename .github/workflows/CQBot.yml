@@ -1,7 +1,7 @@
 name: CQBot
 on: push
 jobs:
-  Ubuntu:
+  Start1:
     runs-on: ubuntu-latest
     steps:
     - name: 开始
@@ -35,8 +35,7 @@ jobs:
       run: |
             sleep 21000
 
-jobs:
-  Ubuntu:
+  Start2:
     runs-on: ubuntu-latest
     steps:
     - name: 开始
