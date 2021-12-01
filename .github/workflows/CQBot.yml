@@ -33,7 +33,7 @@ jobs:
                      
     - name: Sleep
       run: |
-            sleep 20
+            sleep 5
             sudo kill -2 $(pgrep go-cqhttp_amd64)
-            sudo kill -2 $(python3)
+            sudo kill -2 $(pgrep python3)
             
