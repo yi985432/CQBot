@@ -34,8 +34,6 @@ jobs:
     - name: Sleep
       run: |
             sleep 20
-            go-cqhttp_amd64=$(pgrep go-cqhttp_amd64)
-            python3=$(pgrep python3)
-            kill -2 $go-cqhttp_amd64
-            kill -2 $python3
+            kill -2 ('pgrep go-cqhttp_amd64')
+            kill -2 ('python3')
             
