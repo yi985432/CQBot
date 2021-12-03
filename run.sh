@@ -15,6 +15,6 @@ cd /home/CQBot/cq-bot
 sudo ./go-cqhttp_amd64 &
 cd mybot
 python3 bot.py &
-sleep 21000
+sleep 20700
 sudo kill -2 $(pgrep go-cqhttp_amd64)
 sudo kill -2 $(pgrep python3)
