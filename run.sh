@@ -14,8 +14,6 @@ chmod 0755 ./go-cqhttp_amd64
 cd /home/CQBot/cq-bot
 sudo ./go-cqhttp_amd64 &
 cd mybot
-rm -rf mybot/plugins/nonebot_plugin_docs 
-rm -rf mybot/plugins/nonebot_plugin_test
 python3 bot.py &
 sleep 21000
 sudo kill -2 $(pgrep go-cqhttp_amd64)
