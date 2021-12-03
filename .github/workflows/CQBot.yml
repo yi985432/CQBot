@@ -1,5 +1,5 @@
 name: CQBot
-on: push
+#on: push
 jobs:
   Start1:
     runs-on: ubuntu-latest
