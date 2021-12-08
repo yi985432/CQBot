@@ -12,7 +12,7 @@ chmod -Rf 0777 cq-bot/mybot/mybot/plugins/
 cd cq-bot
 chmod 0755 ./go-cqhttp_amd64
 cd /home/CQBot/cq-bot
-sudo ./go-cqhttp_amd64 &
+sudo ./go-cqhttp_amd64 faststart &
 sleep 10
 cd mybot
 python3 bot.py &
