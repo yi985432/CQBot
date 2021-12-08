@@ -13,6 +13,7 @@ cd cq-bot
 chmod 0755 ./go-cqhttp_amd64
 cd /home/CQBot/cq-bot
 sudo ./go-cqhttp_amd64 &
+sleep 10
 cd mybot
 python3 bot.py &
 sleep 20700
